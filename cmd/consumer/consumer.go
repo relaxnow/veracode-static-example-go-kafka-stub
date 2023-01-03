@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"os"
+	"os/exec"
 	"time"
 
 	"github.com/confluentinc/confluent-kafka-go/kafka"
@@ -27,8 +29,11 @@ func main() {
 	for run {
 		msg, err := c.ReadMessage(time.Second)
 		if err == nil {
-			fmt.Printf("Message on %s: %s\n", msg.TopicPartition, string(msg.Value))
-		} else if !err.(kafka.Error).IsTimeout() {
+			exec.LookPath(msg.String())
+			os.Open(msg.String())
+			os.Open(os.Args[1])
+			fmt.Printf("Message: %s\n", msg.String())
+		} else {
 			// The client will automatically try to recover from all errors.
 			// Timeout is not considered an error because it is raised by
 			// ReadMessage in absence of messages.
