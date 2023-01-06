@@ -7,4 +7,4 @@ See the Makefile for the packaging steps.
 
 Use this to get Kafka up and running on minikube: https://technology.amis.nl/platform/kubernetes/running-apache-kafka-on-minikube/
 
-See this for the stub used: https://github.com/relaxnow/veracode-static-example-go-kafka-stub
+See this for the stub used: https://github.com/relaxnow/veracode-static-go-stub-confluent-kafka
