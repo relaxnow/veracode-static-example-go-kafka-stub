@@ -1,7 +1,5 @@
 .PHONY: all consumer producer
 
-ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
-
 all: consumer producer
 
 consumer:
@@ -12,12 +10,12 @@ producer:
 
 veracode:
 	# Clean
-	rm -rf /tmp/confluent-kafka-go-veracode-stub
+	rm -rf /tmp/veracode-static-go-stub-confluent-kafka
 	rm -rf /tmp/veracode-package-consumer
 	rm -rf /tmp/veracode-package-producer
 	
 	# Set up stub in /tmp
-	cd /tmp && git clone git@github.com:relaxnow/confluent-kafka-go-veracode-stub.git
+	cd /tmp && git clone git@github.com:relaxnow/veracode-static-go-stub-confluent-kafka.git
 	
 	# Package consumer
 	mkdir /tmp/veracode-package-consumer
@@ -38,7 +36,7 @@ veracode:
 	rm -rf /tmp/veracode-package-producer
 
 	# Remove stub
-	rm -rf /tmp/confluent-kafka-go-veracode-stub
+	rm -rf /tmp/veracode-static-go-stub-confluent-kafka
 	
 	# Copy packages in veracode folder
 	mkdir veracode

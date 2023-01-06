@@ -1,7 +1,5 @@
-module github.com/relaxnow/go-kafka-mock-example
+module github.com/relaxnow/veracode-static-example-go-kafka-stub
 
 go 1.19
 
 require github.com/confluentinc/confluent-kafka-go v1.9.2
-
-replace github.com/confluentinc/confluent-kafka-go => ../confluent-kafka-go-veracode-stub
