@@ -15,7 +15,7 @@ veracode:
 	rm -rf /tmp/veracode-package-producer
 	
 	# Set up stub in /tmp
-	cd /tmp && git clone git@github.com:relaxnow/veracode-static-go-stub-confluent-kafka.git
+	cd /tmp && git clone -b v1.4.2 git@github.com:relaxnow/veracode-static-go-stub-confluent-kafka.git
 	
 	# Package consumer
 	mkdir /tmp/veracode-package-consumer

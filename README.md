@@ -1,4 +1,4 @@
-# Veracode Static (Analysis) Example: Go Kafka Stub
+# Veracode Static (Analysis) Example: Go Kafka Stub (v1.4.2)
 
 This project demonstrates how to stub out a dependency that contains CGo.
 As an example the 'confluent-kafka-go' example is stubbed out and replaced during packaging.
